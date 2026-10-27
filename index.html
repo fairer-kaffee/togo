@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fairer Kaffee to go – 2 €</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F7F4; --ink:#16241D; --muted:#5C6B63; --accent:#2F6B4F; --line:#D8DFDA; --cup:#16241D; --cupfill:#F5F7F4;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#121A16; --ink:#EDF2EE; --muted:#9AA9A0; --accent:#7FC9A1; --line:#27342D; --cup:#EDF2EE; --cupfill:#121A16;}
+}
+:root[data-theme="dark"]{--bg:#121A16; --ink:#EDF2EE; --muted:#9AA9A0; --accent:#7FC9A1; --line:#27342D; --cup:#EDF2EE; --cupfill:#121A16;}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+.logo{font-weight:800;letter-spacing:.04em;text-decoration:none}
+header a.link{color:var(--muted);text-decoration:none;font-size:.95rem}
+header a.link:hover{color:var(--ink)}
+
+.hero{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:32px;padding:56px 0 96px}
+.price{font-size:clamp(7rem,24vw,15rem);font-weight:800;line-height:.85;letter-spacing:-.05em;color:var(--accent)}
+.hero h1{font-size:clamp(1.4rem,3vw,2rem);font-weight:400;max-width:20ch;margin-top:28px;line-height:1.25}
+.hero p{color:var(--muted);margin-top:12px;max-width:34ch}
+.cup{width:100%;max-width:240px;justify-self:center}
+.cup *{stroke:var(--cup)}
+
+section{border-top:1px solid var(--line);padding:64px 0}
+h2{font-size:1.1rem;font-weight:800;margin-bottom:28px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.three h3{font-size:1.15rem;font-weight:800;margin-bottom:6px}
+.three p{color:var(--muted)}
+
+.bar{display:flex;height:44px;border-radius:6px;overflow:hidden;gap:3px}
+.bar div{background:var(--accent)}
+.bar div:nth-child(2){opacity:.7}.bar div:nth-child(3){opacity:.45}.bar div:nth-child(4){opacity:.25}
+.legend{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px;font-size:.95rem}
+.legend b{display:block;font-size:1.3rem}
+.legend span{color:var(--muted)}
+
+.visit p{font-size:1.4rem;max-width:26ch;line-height:1.35}
+.visit small{display:block;color:var(--muted);margin-top:14px;font-size:1rem}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:.9rem}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;padding:24px 0 64px}
+  .cup{max-width:140px;justify-self:start;order:-1}
+  .three{grid-template-columns:1fr;gap:24px}
+  .legend{grid-template-columns:1fr 1fr}
+  section{padding:48px 0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#">Fairer Kaffee to go</a>
+    <a class="link" href="#fair">Warum fair?</a>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <div class="price" aria-label="2 Euro">2&nbsp;€</div>
+        <h1>Fair gehandelt. Fair bezahlt. Fair im Preis.</h1>
+        <p>Jeden Tag. Jede Größe. Immer zwei Euro.</p>
+      </div>
+      <svg class="cup" viewBox="0 0 120 160" fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <path d="M30 6c0 8 8 8 8 16M52 6c0 8 8 8 8 16M74 6c0 8 8 8 8 16"/>
+        <path d="M16 40h88l-10 108a8 8 0 0 1-8 7H34a8 8 0 0 1-8-7z" style="fill:var(--cupfill)"/>
+        <path d="M13 40h94"/>
+        <path d="M21 82h78l-4 44H25z" style="fill:var(--accent);stroke:none"/>
+      </svg>
+    </div>
+
+    <section id="fair">
+      <h2>Fair heißt bei uns:</h2>
+      <div class="three">
+        <div><h3>Faire Bohnen</h3><p>Die Hälfte deiner 2 € geht direkt an die Bauern.</p></div>
+        <div><h3>Faire Löhne</h3><p>Wer den Kaffee macht, kann davon leben.</p></div>
+        <div><h3>Fairer Preis</h3><p>Ein Preis für alle. Ohne Aufschläge, ohne Überraschung.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Wohin deine 2 € gehen</h2>
+      <div class="bar" role="img" aria-label="Aufteilung: 1,00 Euro Bauern, 0,50 Euro Team, 0,35 Euro Becher und Miete, 0,15 Euro Rücklage">
+        <div style="flex:100"></div><div style="flex:50"></div><div style="flex:35"></div><div style="flex:15"></div>
+      </div>
+      <div class="legend">
+        <div><b>1,00 €</b><span>Bauern</span></div>
+        <div><b>0,50 €</b><span>Team</span></div>
+        <div><b>0,35 €</b><span>Becher &amp; Miete</span></div>
+        <div><b>0,15 €</b><span>Rücklage</span></div>
+      </div>
+    </section>
+
+    <section class="visit">
+      <h2>Vorbeikommen</h2>
+      <p>Mo–Fr 7–15 Uhr</p>
+      <small>Eigenen Becher mitbringen? Das ist uns eine Freude – der Preis bleibt gleich.</small>
+    </section>
+  </main>
+
+  <footer>© 2026 Fairer Kaffee to go</footer>
+</div>
+</body>
+</html>
