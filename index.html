@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fairer Kaffee to go – 2 €</title>
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#EEF4FA; --ink:#22303F; --muted:#5C6E80; --accent:#3F6E9C; --line:#D3E0EC;
-  --c1:#3F6E9C; --c2:#9A6B50; --c3:#9BC1E6; --c4:#B8AE9E;
-  --cup-body:#3F6E9C; --cup-shade:#3A6490; --cup-inner:#3B4651; --cup-sleeve:#CFC8B8; --cup-lid:#D4CEBF; --cup-lidside:#B8AE9E;
+  --c1:#3F6E9C; --c2:#6F97BE; --c3:#9BC1E6; --c4:#CFC8B8;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#16202A; --ink:#EDF2F7; --muted:#9DB0C2; --accent:#6C9BC9; --line:#26364A; --c1:#6C9BC9; --c2:#B98264; --c3:#8DB4DB; --c4:#A39A8A;}
+  :root:not([data-theme="light"]){--bg:#16202A; --ink:#EDF2F7; --muted:#9DB0C2; --accent:#6C9BC9; --line:#26364A; --c1:#6C9BC9; --c2:#4F7BA8; --c3:#35597F; --c4:#A39A8A;}
 }
-:root[data-theme="dark"]{--bg:#16202A; --ink:#EDF2F7; --muted:#9DB0C2; --accent:#6C9BC9; --line:#26364A; --c1:#6C9BC9; --c2:#B98264; --c3:#8DB4DB; --c4:#A39A8A;}
+:root[data-theme="dark"]{--bg:#16202A; --ink:#EDF2F7; --muted:#9DB0C2; --accent:#6C9BC9; --line:#26364A; --c1:#6C9BC9; --c2:#4F7BA8; --c3:#35597F; --c4:#A39A8A;}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box;margin:0}
 body{background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -33,7 +33,7 @@ header a.link:hover{color:var(--ink)}
 .price{font-size:clamp(7rem,24vw,15rem);font-weight:800;line-height:.85;letter-spacing:-.05em;color:var(--accent)}
 .hero h1{font-size:clamp(1.4rem,3vw,2rem);font-weight:400;max-width:20ch;margin-top:28px;line-height:1.25}
 .hero p{color:var(--muted);margin-top:12px;max-width:34ch}
-.cup{width:100%;max-width:260px;justify-self:center}
+.cup{width:100%;max-width:260px;height:auto;justify-self:center}
 
 section{border-top:1px solid var(--line);padding:64px 0}
 h2{font-size:1.1rem;font-weight:800;margin-bottom:28px}
@@ -79,16 +79,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
         <h1>Fair gehandelt. Fair im Preis.</h1>
         <p>Jeden Tag. Jeder Becher. Immer zwei Euro.</p>
       </div>
-      <svg class="cup" viewBox="0 0 160 200" aria-hidden="true">
-        <g transform="rotate(14 80 100)">
-          <path d="M40 60h80l-12 108q-28 8-56 0z" fill="var(--cup-body)"/>
-          <path d="M50.3 150L52 168Q80 176 108 168L109.7 150Q80 158 50.3 150Z" fill="var(--cup-shade)"/>
-          <ellipse cx="80" cy="60" rx="40" ry="9" fill="var(--cup-inner)"/>
-          <path d="M43 88q37 12 74 0l-5.7 52q-31 12-62.6 0z" fill="var(--cup-sleeve)"/>
-          <path d="M34 34v6q46 16 92 0v-6z" fill="var(--cup-lidside)"/>
-          <ellipse cx="80" cy="34" rx="46" ry="10" fill="var(--cup-lid)"/>
-        </g>
-      </svg>
+      <img class="cup" src="cup.png" width="560" height="842" alt="Kaffeebecher">
     </div>
 
     <section id="fair">
@@ -102,7 +93,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
 
     <section>
       <h2>Wohin deine 2 € gehen</h2>
-      <div class="bar" role="img" aria-label="Aufteilung: 1,00 Euro Bauern, 0,50 Euro Team, 0,35 Euro Becher und Miete, 0,15 Euro Rücklage">
+      <div class="bar" role="img" aria-label="Aufteilung: 1,00 Euro Bauern, 0,50 Euro Team, 0,35 Euro Produktion, 0,15 Euro Rücklage und Weiterentwicklung">
         <div style="flex:100"></div><div style="flex:50"></div><div style="flex:35"></div><div style="flex:15"></div>
       </div>
       <div class="legend">
