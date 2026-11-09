@@ -28,6 +28,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:28p
 .logo{font-weight:800;letter-spacing:.04em;text-decoration:none}
 header a.link{color:var(--muted);text-decoration:none;font-size:.95rem}
 header a.link:hover{color:var(--ink)}
+header nav{display:flex;gap:28px}
 
 .hero{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:32px;padding:56px 0 96px}
 .price{font-size:clamp(7rem,24vw,15rem);font-weight:800;line-height:.85;letter-spacing:-.05em;color:var(--accent)}
@@ -47,8 +48,13 @@ h2{font-size:1.1rem;font-weight:800;margin-bottom:28px}
 .bar div:nth-child(3){background:var(--c3)}
 .bar div:nth-child(4){background:var(--c4)}
 .legend{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px;font-size:.95rem}
+.legend div{border-top:4px solid;padding-top:10px}
+.legend div:nth-child(1){border-color:var(--c1)}
+.legend div:nth-child(2){border-color:var(--c2)}
+.legend div:nth-child(3){border-color:var(--c3)}
+.legend div:nth-child(4){border-color:var(--c4)}
+.legend span{display:block;color:var(--muted)}
 .legend b{display:block;font-size:1.3rem}
-.legend span{color:var(--muted)}
 
 .visit p{font-size:1.4rem;max-width:26ch;line-height:1.35}
 .visit small{display:block;color:var(--muted);margin-top:14px;font-size:1rem}
@@ -68,8 +74,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
 <div class="wrap">
   <header>
     <a class="logo" href="#">Fairer Kaffee to go</a>
-    <a class="link" href="#fair">Warum fair?</a>
-    <a class="link" href="#contact">Kontakt</a>
+    <nav>
+      <a class="link" href="#fair">Warum fair?</a>
+      <a class="link" href="#contact">Kontakt</a>
+    </nav>
   </header>
 
   <main>
@@ -97,10 +105,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
         <div style="flex:100"></div><div style="flex:50"></div><div style="flex:35"></div><div style="flex:15"></div>
       </div>
       <div class="legend">
-        <div><b>1,00 €</b><span>Bauern</span></div>
-        <div><b>0,50 €</b><span>Team</span></div>
-        <div><b>0,35 €</b><span>Produktion</span></div>
-        <div><b>0,15 €</b><span>Rücklage &amp; Weiterentwicklung</span></div>
+        <div><span>Bauern</span><b>1,00 €</b></div>
+        <div><span>Team</span><b>0,50 €</b></div>
+        <div><span>Produktion</span><b>0,35 €</b></div>
+        <div><span>Rücklage &amp; Weiterentwicklung</span><b>0,15 €</b></div>
       </div>
     </section>
 
