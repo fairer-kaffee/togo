@@ -8,14 +8,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F4F7FA; --ink:#14222E; --muted:#5A6B7A; --accent:#4377A1; --line:#D6DFE7; --cup:#14222E; --cupfill:#F4F7FA;
+  --bg:#EEF4FA; --ink:#22303F; --muted:#5C6E80; --accent:#3F6E9C; --line:#D3E0EC;
+  --c1:#3F6E9C; --c2:#9A6B50; --c3:#9BC1E6; --c4:#B8AE9E;
+  --cup-body:#3F6E9C; --cup-shade:#3A6490; --cup-inner:#3B4651; --cup-sleeve:#CFC8B8; --cup-lid:#D4CEBF; --cup-lidside:#B8AE9E;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#101820; --ink:#EAF0F5; --muted:#93A5B5; --accent:#6A9FC8; --line:#223140; --cup:#EAF0F5; --cupfill:#101820;}
+  :root:not([data-theme="light"]){--bg:#16202A; --ink:#EDF2F7; --muted:#9DB0C2; --accent:#6C9BC9; --line:#26364A; --c1:#6C9BC9; --c2:#B98264; --c3:#8DB4DB; --c4:#A39A8A;}
 }
-:root[data-theme="dark"]{--bg:#101820; --ink:#EAF0F5; --muted:#93A5B5; --accent:#6A9FC8; --line:#223140; --cup:#EAF0F5; --cupfill:#101820;}
+:root[data-theme="dark"]{--bg:#16202A; --ink:#EDF2F7; --muted:#9DB0C2; --accent:#6C9BC9; --line:#26364A; --c1:#6C9BC9; --c2:#B98264; --c3:#8DB4DB; --c4:#A39A8A;}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box;margin:0}
 body{background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -31,8 +33,7 @@ header a.link:hover{color:var(--ink)}
 .price{font-size:clamp(7rem,24vw,15rem);font-weight:800;line-height:.85;letter-spacing:-.05em;color:var(--accent)}
 .hero h1{font-size:clamp(1.4rem,3vw,2rem);font-weight:400;max-width:20ch;margin-top:28px;line-height:1.25}
 .hero p{color:var(--muted);margin-top:12px;max-width:34ch}
-.cup{width:100%;max-width:240px;justify-self:center}
-.cup *{stroke:var(--cup)}
+.cup{width:100%;max-width:260px;justify-self:center}
 
 section{border-top:1px solid var(--line);padding:64px 0}
 h2{font-size:1.1rem;font-weight:800;margin-bottom:28px}
@@ -41,8 +42,10 @@ h2{font-size:1.1rem;font-weight:800;margin-bottom:28px}
 .three p{color:var(--muted)}
 
 .bar{display:flex;height:44px;border-radius:6px;overflow:hidden;gap:3px}
-.bar div{background:var(--accent)}
-.bar div:nth-child(2){opacity:.7}.bar div:nth-child(3){opacity:.45}.bar div:nth-child(4){opacity:.25}
+.bar div:nth-child(1){background:var(--c1)}
+.bar div:nth-child(2){background:var(--c2)}
+.bar div:nth-child(3){background:var(--c3)}
+.bar div:nth-child(4){background:var(--c4)}
 .legend{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px;font-size:.95rem}
 .legend b{display:block;font-size:1.3rem}
 .legend span{color:var(--muted)}
@@ -54,7 +57,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
 
 @media (max-width:720px){
   .hero{grid-template-columns:1fr;padding:24px 0 64px}
-  .cup{max-width:140px;justify-self:start;order:-1}
+  .cup{max-width:150px;justify-self:start;order:-1}
   .three{grid-template-columns:1fr;gap:24px}
   .legend{grid-template-columns:1fr 1fr}
   section{padding:48px 0}
@@ -76,11 +79,15 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
         <h1>Fair gehandelt. Fair im Preis.</h1>
         <p>Jeden Tag. Jeder Becher. Immer zwei Euro.</p>
       </div>
-      <svg class="cup" viewBox="0 0 120 160" fill="none" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-        <path d="M30 6c0 8 8 8 8 16M52 6c0 8 8 8 8 16M74 6c0 8 8 8 8 16"/>
-        <path d="M16 40h88l-10 108a8 8 0 0 1-8 7H34a8 8 0 0 1-8-7z" style="fill:var(--cupfill)"/>
-        <path d="M13 40h94"/>
-        <path d="M21 82h78l-4 44H25z" style="fill:var(--accent);stroke:none"/>
+      <svg class="cup" viewBox="0 0 160 200" aria-hidden="true">
+        <g transform="rotate(14 80 100)">
+          <path d="M40 60h80l-12 108q-28 8-56 0z" fill="var(--cup-body)"/>
+          <path d="M50.3 150L52 168Q80 176 108 168L109.7 150Q80 158 50.3 150Z" fill="var(--cup-shade)"/>
+          <ellipse cx="80" cy="60" rx="40" ry="9" fill="var(--cup-inner)"/>
+          <path d="M43 88q37 12 74 0l-5.7 52q-31 12-62.6 0z" fill="var(--cup-sleeve)"/>
+          <path d="M34 34v6q46 16 92 0v-6z" fill="var(--cup-lidside)"/>
+          <ellipse cx="80" cy="34" rx="46" ry="10" fill="var(--cup-lid)"/>
+        </g>
       </svg>
     </div>
 
