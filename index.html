@@ -31,7 +31,7 @@ header a.link:hover{color:var(--ink)}
 header nav{display:flex;gap:28px}
 
 .hero{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:32px;padding:56px 0 96px}
-.price{font-size:clamp(7rem,24vw,15rem);font-weight:800;line-height:.85;letter-spacing:-.05em;color:var(--accent)}
+.price{font-size:clamp(4.5rem,13vw,8rem);font-weight:800;line-height:.9;letter-spacing:-.04em;color:var(--accent);white-space:nowrap}
 .hero h1{font-size:clamp(1.4rem,3vw,2rem);font-weight:400;max-width:20ch;margin-top:28px;line-height:1.25}
 .hero p{color:var(--muted);margin-top:12px;max-width:34ch}
 .cup{width:100%;max-width:260px;height:auto;justify-self:center}
@@ -83,9 +83,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
   <main>
     <div class="hero">
       <div>
-        <div class="price" aria-label="2 Euro">2&nbsp;€</div>
+        <div class="price" aria-label="3,99 Euro">3,99&nbsp;€</div>
         <h1>Fair gehandelt. Fair im Preis.</h1>
-        <p>Jeden Tag. Jeder Becher. Immer zwei Euro.</p>
+        <p>Jeden Tag. Jeder Becher. Immer 3,99 Euro.</p>
       </div>
       <img class="cup" src="cup.png" width="560" height="842" alt="Kaffeebecher">
     </div>
@@ -93,22 +93,22 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
     <section id="fair">
       <h2>Fair heißt bei uns:</h2>
       <div class="three">
-        <div><h3>Faire Bohnen</h3><p>Die Hälfte deiner 2 € geht direkt an die Bauern.</p></div>
+        <div><h3>Faire Bohnen</h3><p>Die Hälfte deiner 3,99 € geht direkt an die Bauern.</p></div>
         <div><h3>Faire Löhne</h3><p>Wer den Kaffee macht, kann davon leben.</p></div>
         <div><h3>Fairer Preis</h3><p>Ein Preis - für alle immer günstig.</p></div>
       </div>
     </section>
 
     <section>
-      <h2>Wohin deine 2 € gehen</h2>
-      <div class="bar" role="img" aria-label="Aufteilung: 1,00 Euro Bauern, 0,50 Euro Team, 0,35 Euro Produktion, 0,15 Euro Rücklage und Weiterentwicklung">
-        <div style="flex:100"></div><div style="flex:50"></div><div style="flex:35"></div><div style="flex:15"></div>
+      <h2>Wohin deine 3,99 € gehen</h2>
+      <div class="bar" role="img" aria-label="Aufteilung: 2,00 Euro Bauern, 1,00 Euro Team, 0,70 Euro Produktion, 0,29 Euro Rücklage und Weiterentwicklung">
+        <div style="flex:200"></div><div style="flex:100"></div><div style="flex:70"></div><div style="flex:29"></div>
       </div>
       <div class="legend">
-        <div><span>Bauern</span><b>1,00 €</b></div>
-        <div><span>Team</span><b>0,50 €</b></div>
-        <div><span>Produktion</span><b>0,35 €</b></div>
-        <div><span>Rücklage &amp; Weiterentwicklung</span><b>0,15 €</b></div>
+        <div><span>Bauern</span><b>2,00 €</b></div>
+        <div><span>Team</span><b>1,00 €</b></div>
+        <div><span>Produktion</span><b>0,70 €</b></div>
+        <div><span>Rücklage &amp; Weiterentwicklung</span><b>0,29 €</b></div>
       </div>
     </section>
 
